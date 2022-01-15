@@ -1,6 +1,6 @@
-# Toolbox and Demo Script
+# Toolbox and Demo Scripts
 
-scripts I've written modify or use regularly 
+Scripts I've written modify or use regularly 
 
 
 

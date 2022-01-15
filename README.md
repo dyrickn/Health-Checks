@@ -1,7 +1,7 @@
-# Health Checks and Tests
+# Toolbox and Demo Script
 
-scripts that check the health of our computers
+scripts I've written modify or use regularly 
 
-added: basic unit test stuff
+
 
 

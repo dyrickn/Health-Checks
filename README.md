@@ -1,4 +1,7 @@
-# Health-Checks
-scripts that check the health of our computers.
+# Health Checks and Tests
 
-This repo will be populated with checks.
+scripts that check the health of our computers
+
+added: basic unit test stuff
+
+

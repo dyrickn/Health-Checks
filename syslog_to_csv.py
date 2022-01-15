@@ -4,11 +4,16 @@ import csv
 import operator
 import re
 
+'''Script from one of my courses, utilized regex to make syslog.log output more human readable for easier troubleshooting. 
+Creates two CSV files, one is an error list, other is error count by user'''
+
 error_msg = {}
 user_stat = {}
 
 error_pattern = r'ticket: ERROR ([\w\s\']*) \((.+)\)'
 info_pattern = r'ticket: INFO.* \((.+)\)'
+
+#Using REGEX stored in variables above to parse 
 
 with open('syslog.log', 'r') as logs:
     for line in logs.readlines():
@@ -21,8 +26,11 @@ with open('syslog.log', 'r') as logs:
             extracts = re.search(info_pattern, line)
             user_stat.setdefault(extracts.group(1), [0, 0])[0] += 1
 
+#Sorted method to sort lines            
 error_sorted = sorted(error_msg.items(), key=operator.itemgetter(1), reverse=True)
 user_sorted = sorted(user_stat.items(), )
+
+#Print out lines
 print("\nErrors List----------\n")
 print(error_sorted)
 print("\nUser List------------\n")
